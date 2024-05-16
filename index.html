@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Viabilidade Econômica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Viabilidade Econômica</h1>
+        <form id="viabilityCalculator">
+            <!-- Valores do imóvel -->
+            <div class="input-group">
+                <label for="appraisalValue">Valor de avaliação (R$):</label>
+                <input type="text" id="appraisalValue" placeholder="Ex: 210.000,00">
+            </div>
+            <div class="input-group">
+                <label for="estimatedBidValue">Valor estimado para arrematação (R$):</label>
+                <input type="text" id="estimatedBidValue" placeholder="Ex: 130.000,00">
+            </div>
+            <div class="input-group">
+                <label for="estimatedSaleValue">Valor de Revenda estimado (R$):</label>
+                <input type="text" id="estimatedSaleValue" placeholder="Ex: 220.000,00">
+            </div>
+            <!-- Custos de arrematação -->
+            <div class="input-group">
+                <label for="auctioneerFee">Leiloeiro (%):</label>
+                <input type="text" id="auctioneerFee" placeholder="Ex: 5%">
+            </div>
+            <!-- Custos de documentação -->
+            <div class="input-group">
+                <label for="deedCosts">Escritura (R$):</label>
+                <input type="text" id="deedCosts" placeholder="Ex: 1.500,00">
+            </div>
+            <div class="input-group">
+                <label for="funrejus">Funrejus (%):</label>
+                <input type="text" id="funrejus" value="0.2">
+            </div>
+            <div class="input-group">
+                <label for="itbi">ITBI (%):</label>
+                <input type="text" id="itbi" placeholder="Ex: 2%">
+            </div>
+            <div class="input-group">
+                <label for="propertyRegistration">Registro de Imóveis (R$):</label>
+                <input type="text" id="propertyRegistration" placeholder="Ex: 1.500,00">
+            </div>
+            <!-- Custos de Imissão na posse -->
+            <div class="input-group">
+                <label for="lawyerCosts">Advogado (R$):</label>
+                <input type="text" id="lawyerCosts" placeholder="Ex: 5.000,00">
+            </div>
+            <div class="input-group">
+                <label for="processCosts">Custas do processo (R$):</label>
+                <input type="text" id="processCosts" placeholder="Ex: 1.500,00">
+            </div>
+            <!-- Custos de Reforma -->
+            <div class="input-group">
+                <label for="laborCosts">Mão de obra (R$):</label>
+                <input type="text" id="laborCosts" placeholder="Ex: 2.000,00">
+            </div>
+            <div class="input-group">
+                <label for="materialsCosts">Materiais (R$):</label>
+                <input type="text" id="materialsCosts" placeholder="Ex: 2.000,00">
+            </div>
+            <!-- Despesas do imóvel -->
+            <div class="input-group">
+                <label for="iptu">IPTU/Mensal (R$):</label>
+                <input type="text" id="iptu" placeholder="Ex: 50,00">
+            </div>
+            <div class="input-group">
+                <label for="condoFee">Condomínio/Mensal (R$):</label>
+                <input type="text" id="condoFee" placeholder="Ex: 300,00">
+            </div>
+            <div class="input-group">
+                <label for="estimatedTimeToSell">Prazo estimado para a venda (meses):</label>
+                <input type="text" id="estimatedTimeToSell" placeholder="Ex: 6">
+            </div>
+            <div class="input-group">
+                <label for="brokerage">Corretagem (%):</label>
+                <input type="text" id="brokerage" placeholder="Ex: 6%">
+            </div>
+            <div class="input-group">
+                <label for="capitalGainTax">Imposto de Ganho de Capital (%):</label>
+                <input type="text" id="capitalGainTax" placeholder="Ex: 15%">
+            </div>
+            <div class="input-group">
+                <label for="selicAnnual">Selic Anual (%):</label>
+                <input type="text" id="selicAnnual" placeholder="Ex: 10,5%">
+            </div>
+            <div class="buttons">
+                <button type="submit" class="calculate">Calcular</button>
+                <button type="button" class="recalculate" onclick="recalculate();">Recalcular</button>
+                <button type="button" class="print" onclick="window.print();">Imprimir</button>
+            </div>
+        </form>
+        <div id="results"></div>
+    </div>
+    <footer>
+        <img src="https://s01.jetimgs.com/tnnAwYXphKBPiW3sr35S56TSBu59xTuwOiBGvJNNoNMd29yUZL3dr5Is9mHwU6exARdqah8P0l2J2TfnKp_6FFqtTdh1bJ6YBFfo7QEHQ3KTeM0TryQt/logoareamorarouinvestir202301png.webp" alt="ÁREA2 IMÓVEIS LTDA Logo">
+        <p>ÁREA2 IMOVEIS LTDA, Creci: J04175, imobiliária credenciada para venda de imóveis de propriedade da Caixa Econômica Federal.</p>
+        <p>Para MORAR ou INVESTIR, garanta seu imóvel no Paraná com tranquilidade. 📲💬 Fale conosco. WhatsApp [41] 99966.3908 📧 contato@areaimoveis.com.br</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
